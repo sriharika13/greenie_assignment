@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
+.container {
+  /* min-height: 100vh; */
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+  border-color: #F1F1F4;
+  border: 1px solid #F1F1F4;
+  padding: 20px;
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 0.625rem;
+    margin: 0;
+    width: 100%; /* Responsive width */
+  max-width: 800px; /* Adjust maximum width as needed */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Default state */
+.btn.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Hover state */
+.btn.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Focus state */
+.btn.btn-primary:focus,
+.btn.btn-primary.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Active state */
+.btn.btn-primary:active,
+.btn.btn-primary.active {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.text-primary {
+  color: #007bff; /* Default primary text color */
+}
+
+/* Example hover state for text */
+.text-primary:hover {
+  color: #0056b3; /* Adjusted color on hover */
+}
+
+/* Example additional styles */
+.text-primary.underline {
+  text-decoration: underline; /* Adding underline to primary text */
+}
+
+.text-primary.bold {
+  font-weight: bold; /* Making the primary text bold */
+}
+
+.text-danger {
+  color: #dc3545; /* Default danger text color */
+}
+
+/* Example hover state for text-danger */
+.text-danger:hover {
+  color: #bb2d3b; /* Adjusted color on hover */
+}
+
+/* Example additional styles */
+.text-danger.underline {
+  text-decoration: underline; /* Adding underline to danger text */
+}
+
+.text-danger.bold {
+  font-weight: bold; /* Making the danger text bold */
+}
+
+.rounded-pill {
+  border-radius: 50px; /* Adjust the value to control the roundness */
+}
+
+/* Example for .fw-bold */
+.fw-bold {
+  font-weight: bold; /* Applying bold font weight */
+}
+
+/* Default state */
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+/* Hover state */
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+/* Focus state */
+.btn-secondary:focus,
+.btn-secondary.focus {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+/* Active state */
+.btn-secondary:active,
+.btn-secondary.active {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+/* Styles for the header */
+header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main-container{
+  padding: 1.5rem;
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.overlay-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.overlay button {
+  margin-top: 20px;
+}
+
+.navbar{
+  border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    background-color: rgba(255,255,255, 1);
+    padding: 0.5rem!important;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.nav-links {
+  display: inline;
+  float: left;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  color: #252F4A;
+  cursor: pointer;
+}
+
+.nav-links:hover {
+  background-color: transparent;
+    padding-top: 0.675rem;
+    padding-bottom: 0.675rem;
+    font-weight: 500;
+  color: #1B84FF;
+}
+
+.selectedNav{
+  box-shadow: 0 3px 4px rgba(0,0,0,.03);
+  padding-top: 0.675rem;
+    padding-bottom: 0.675rem;
+    font-weight: 500;
+  color: #1B84FF;
+
+}
+
+
+.login {
+  margin: 20px auto;
+  padding: 40px 50px;
+  max-width: 300px;
+  border-radius: 5px;
+  background: #fff;
+}
+  .login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px; 
+    font-family: Raleway, sans-serif;
+  }
+
+.login input[type=text],
+.login input[type=password] {
+  border: 1px solid #c0c0c0;
+  transition: .2s;
+}
+
+.login input:hover {
+  border-color: #F44336;
+  outline: none;
+  transition: all .2s ease-in-out;
+} 
+
+.login input[type=submit] {
+  border: none;
+  background: #EF5350;
   color: white;
+  font-weight: bold;  
+  transition: 0.2s;
+  margin: 20px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.login input[type=submit]:hover {
+  background: #F44336;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .login h2 {
+    margin: 20px 0 0; 
+    color: #EF5350;
+    font-size: 28px;
   }
-  to {
-    transform: rotate(360deg);
+
+.login p {
+  margin-bottom: 40px;
+}
+
+.links {
+  display: table;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+}
+
+.links a:first-child {
+  text-align: left;
+}
+
+.links a:last-child {
+  text-align: right;
+}
+
+  .login h2,
+  .login p,
+  .login a {
+    text-align: center;    
   }
+
+.login a {
+  text-decoration: none;  
+  font-size: .8em;
+}
+
+.login a:visited {
+  color: inherit;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+.success{
+  color:rgb(47, 201, 124);
 }
